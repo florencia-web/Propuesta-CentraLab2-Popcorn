@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CentraLab × Popcorn · Plan de crecimiento 2026</title>
+<meta name="description" content="Propuesta de evolución 2026 para CentraLab por Popcorn. De campañas sueltas a un socio de crecimiento: nueva forma de trabajar (Laboratorio de Innovación, Benchmark, Content Studio, Employer Branding, Comité de Crecimiento) + una idea grande para el año: las historias empiezan mucho antes del resultado.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   CENTRALAB × POPCORN — PLAN DE CRECIMIENTO 2026 · v2
+   Sistema de marca Popcorn · violeta eléctrico + cian
+   ============================================================ */
+:root{
+  --violet-900:#250a4f;
+  --violet-800:#34107a;
+  --violet-700:#4a16a8;
+  --violet-600:#5a18cc;
+  --violet-500:#6e28e8;
+  --violet-glow:#7b34f0;
+  --cyan:#1fe8d8;
+  --cyan-bright:#5cf4e8;
+  --cyan-deep:#12b9ad;
+  --ink:#0e0524;
+  --white:#ffffff;
+  --w-85:rgba(255,255,255,.85);
+  --w-65:rgba(255,255,255,.65);
+  --w-45:rgba(255,255,255,.45);
+  --card:rgba(255,255,255,.05);
+  --card-2:rgba(13,4,40,.45);
+  --line:rgba(255,255,255,.14);
+  --line-soft:rgba(255,255,255,.08);
+  --cyan-line:rgba(31,232,216,.35);
+  --maxw:1180px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--violet-600);
+  color:var(--white);
+  font-family:'Inter',sans-serif;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.6;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(1200px 700px at 78% -8%, rgba(123,52,240,.55), transparent 60%),
+    radial-gradient(1000px 800px at -10% 110%, rgba(31,232,216,.10), transparent 55%),
+    linear-gradient(160deg,#4d12b0 0%,#5a18cc 42%,#3d0f95 100%);
+}
+body::after{
+  content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
+}
+h1,h2,h3,h4,.display{font-family:'Poppins',sans-serif;letter-spacing:-.01em}
+em,i{font-style:normal}
+::selection{background:var(--cyan);color:var(--ink)}
+
+/* ============ HEADER FIJO ============ */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:90;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 38px;transition:all .4s var(--ease);
+}
+.topbar.scrolled{background:rgba(40,12,100,.72);backdrop-filter:blur(14px);padding:12px 38px;box-shadow:0 1px 0 rgba(255,255,255,.07)}
+.cl-chip{display:inline-flex;align-items:center;background:#fff;border-radius:30px;padding:7px 14px}
+.cl-chip img{height:20px;width:auto;display:block}
+.tb-right{display:flex;align-items:center;gap:12px}
+.tb-right img{height:24px;width:auto;display:block}
+.tb-right .lbl{font-family:'Poppins';font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--w-65)}
+
+/* ============ PROGRESO + NAV ============ */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--cyan),var(--cyan-bright));z-index:100;box-shadow:0 0 14px var(--cyan)}
+.dots{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:90;display:flex;flex-direction:column;gap:13px}
+.dots a{position:relative;width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.28);transition:all .3s var(--ease)}
+.dots a:hover{background:var(--w-65);transform:scale(1.25)}
+.dots a.active{background:var(--cyan);box-shadow:0 0 12px var(--cyan);transform:scale(1.35)}
+.dots a span{position:absolute;right:20px;top:50%;transform:translateY(-50%) translateX(6px);white-space:nowrap;font-family:'Poppins';font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#fff;background:rgba(20,6,55,.92);padding:5px 10px;border-radius:6px;opacity:0;pointer-events:none;transition:all .25s var(--ease);border:1px solid var(--line-soft)}
+.dots a:hover span{opacity:1;transform:translateY(-50%) translateX(0)}
+
+/* ============ SECCIONES ============ */
+section{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:120px 38px 92px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;position:relative;z-index:2}
+.sfoot{position:absolute;left:38px;right:38px;bottom:26px;z-index:3;display:flex;justify-content:space-between;align-items:center;font-family:'Poppins';font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--w-45)}
+.sfoot .num{color:var(--cyan)}
+
+/* ============ TIPOGRAFÍA / COMPONENTES ============ */
+.kicker{font-family:'Poppins';font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--cyan);display:inline-flex;align-items:center;gap:10px;margin-bottom:22px}
+.kicker::before{content:'';width:26px;height:1.5px;background:currentColor;opacity:.7}
+h2.sec{font-size:clamp(1.9rem,4.4vw,3.3rem);font-weight:700;line-height:1.08}
+.lead{font-size:clamp(1.02rem,1.6vw,1.22rem);color:var(--w-85);max-width:62ch;margin-top:22px}
+.cy{color:var(--cyan)}
+.muted{color:var(--w-65)}
+
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;transition:transform .35s var(--ease),box-shadow .35s var(--ease),border-color .35s var(--ease)}
+.card:hover{transform:translateY(-4px);box-shadow:0 22px 50px -26px rgba(0,0,0,.6);border-color:var(--cyan-line)}
+.card h3{font-size:1.18rem;font-weight:600;margin-bottom:9px}
+.card p{font-size:.96rem;color:var(--w-85)}
+.card .ix{font-family:'Poppins';font-weight:700;color:var(--cyan);font-size:.92rem;margin-bottom:14px;letter-spacing:.04em}
+
+.chip{display:inline-flex;align-items:center;gap:7px;padding:8px 15px;border:1px solid var(--line);border-radius:40px;font-size:.83rem;font-weight:500;background:var(--card);color:var(--w-85)}
+.chip b{color:var(--cyan);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:11px}
+
+.stat .v{font-family:'Poppins';font-weight:700;font-size:clamp(1.7rem,3.2vw,2.5rem);color:var(--cyan);line-height:1}
+.stat .l{font-size:.86rem;color:var(--w-65);margin-top:8px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:30px}
+
+/* ----- FOTO real ----- */
+.shot{position:relative;border-radius:18px;overflow:hidden;min-height:240px;border:1px solid var(--line);background:var(--card-2)}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.shot.tall{min-height:440px}
+.shot .ov{position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,rgba(14,5,36,.78),rgba(14,5,36,.05) 55%,transparent)}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px 22px}
+.shot .cap .t{font-family:'Poppins';font-weight:600;font-size:1rem;color:#fff}
+.shot .cap .s{font-size:.82rem;color:var(--w-65);margin-top:4px}
+.shot .badge{position:absolute;top:14px;left:14px;z-index:2;font-family:'Poppins';font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);background:var(--cyan);padding:5px 10px;border-radius:30px}
+
+/* ----- SLOT a producir (cápsulas) ----- */
+.slot{position:relative;border-radius:16px;overflow:hidden;min-height:170px;display:flex;flex-direction:column;justify-content:flex-end;background:linear-gradient(150deg,rgba(123,52,240,.32),rgba(31,232,216,.08));border:1px dashed var(--cyan-line)}
+.slot .badge{position:absolute;top:12px;left:12px;font-family:'Poppins';font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);background:rgba(14,5,36,.55);padding:4px 9px;border-radius:30px;border:1px solid var(--cyan-line)}
+.slot .dir{padding:16px 18px;position:relative;z-index:2}
+.slot .dir .t{font-family:'Poppins';font-weight:600;font-size:.92rem;color:#fff}
+
+/* manifiesto */
+.manifiesto{font-family:'Poppins';font-weight:300;font-size:clamp(1.3rem,2.6vw,2rem);line-height:1.42;max-width:30ch}
+.manifiesto strong{font-weight:600;color:#fff}
+.tagblock{font-family:'Poppins';font-weight:600;font-size:clamp(1.05rem,1.8vw,1.35rem);color:var(--cyan);margin-top:30px}
+
+.cap-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s var(--ease),border-color .35s var(--ease)}
+.cap-card:hover{transform:translateY(-4px);border-color:var(--cyan-line)}
+.cap-card .slot{border-radius:0;border:0;border-bottom:1px dashed var(--cyan-line)}
+.cap-card .body{padding:20px 22px 24px}
+.cap-card .role{font-family:'Poppins';font-weight:700;font-size:1.02rem}
+.cap-card .tag{display:inline-block;font-family:'Poppins';font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);background:rgba(31,232,216,.12);padding:4px 9px;border-radius:20px;margin-bottom:11px}
+.cap-card ul{list-style:none;margin-top:12px;display:flex;flex-direction:column;gap:7px}
+.cap-card li{position:relative;padding-left:18px;font-size:.9rem;color:var(--w-85)}
+.cap-card li::before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+.cap-card li b{color:#fff;font-weight:600}
+.cap-txt{margin-top:14px;padding-top:14px;border-top:1px solid var(--line-soft);font-size:.86rem;color:var(--w-65);line-height:1.55}
+
+.idea{border-left:3px solid var(--cyan);padding:14px 0 14px 22px;font-family:'Poppins';font-weight:500;font-size:clamp(1.05rem,1.9vw,1.4rem);line-height:1.4}
+.evo{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:'Poppins';font-weight:600}
+.evo .old{font-size:1.05rem;color:var(--w-65);text-decoration:line-through;text-decoration-color:rgba(31,232,216,.5)}
+.evo .arrow{color:var(--cyan)}
+.evo .new{font-size:clamp(1.2rem,2.4vw,1.8rem);color:#fff}
+
+.cta-go{display:inline-flex;align-items:center;gap:12px;background:var(--cyan);color:var(--ink);font-family:'Poppins';font-weight:700;font-size:1rem;padding:16px 30px;border-radius:50px;text-decoration:none;transition:all .3s var(--ease)}
+.cta-go:hover{transform:translateY(-2px);box-shadow:0 16px 40px -14px var(--cyan)}
+
+.opt-badge{display:inline-block;font-family:'Poppins';font-weight:700;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--cyan);padding:5px 12px;border-radius:30px;margin-bottom:18px}
+.invest{background:linear-gradient(135deg,rgba(31,232,216,.14),rgba(123,52,240,.20));border:1px solid var(--cyan-line);border-radius:18px;padding:30px}
+.invest .big{font-family:'Poppins';font-weight:700;font-size:clamp(2.1rem,4.6vw,3rem);color:#fff;line-height:1.02}
+.invest .big .cy{color:var(--cyan)}
+.invest .row{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:11px 0;border-bottom:1px solid var(--line-soft)}
+.invest .row:last-of-type{border-bottom:0}
+.invest .row .k{color:var(--w-65);font-size:.9rem}
+.invest .row .v{font-family:'Poppins';font-weight:600;font-size:1rem}
+.place{display:flex;flex-direction:column;gap:8px}
+.place .h{font-family:'Poppins';font-weight:700;font-size:1.05rem;display:flex;align-items:center;gap:9px}
+.place .h .d{width:9px;height:9px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan)}
+.place p{font-size:.9rem;color:var(--w-85)}
+
+/* ===== EXTRA v2 — bullets, número grande, trimestres, calendario, roadmap, concepto ===== */
+.blist{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:10px}
+.blist li{position:relative;padding-left:20px;font-size:.95rem;color:var(--w-85)}
+.blist li::before{content:'';position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+.blist li b{color:#fff;font-weight:600}
+
+.bignum{font-family:'Poppins';font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);color:var(--cyan);line-height:.9;letter-spacing:-.02em}
+
+.qbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;transition:border-color .35s var(--ease),transform .35s var(--ease)}
+.qbox:hover{border-color:var(--cyan-line);transform:translateY(-4px)}
+.qbox .q{display:inline-block;font-family:'Poppins';font-weight:700;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--cyan);padding:5px 12px;border-radius:30px;margin-bottom:16px}
+.qbox h3{font-size:1.12rem;font-weight:600;margin-bottom:12px}
+
+.mon{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 20px;transition:border-color .35s var(--ease),transform .35s var(--ease);overflow:hidden}
+.mon:hover{border-color:var(--cyan-line);transform:translateY(-3px)}
+.mon.key{background:linear-gradient(150deg,rgba(123,52,240,.30),rgba(31,232,216,.10));border-color:var(--cyan-line)}
+.mon .m{font-family:'Poppins';font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.mon .t{font-family:'Poppins';font-weight:600;font-size:1rem;color:#fff;line-height:1.25}
+.mon .d{font-size:.82rem;color:var(--w-65);margin-top:6px}
+
+.tl{position:relative;margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.tl::before{content:'';position:absolute;left:0;right:0;top:9px;height:2px;background:linear-gradient(90deg,var(--cyan),rgba(31,232,216,.15));z-index:0}
+.tl .ph{position:relative;z-index:1}
+.tl .ph .dot{width:18px;height:18px;border-radius:50%;background:var(--violet-600);border:3px solid var(--cyan);box-shadow:0 0 12px var(--cyan);margin-bottom:18px}
+.tl .ph .when{font-family:'Poppins';font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.tl .ph h3{font-size:1.08rem;font-weight:600;margin-bottom:8px}
+.tl .ph p{font-size:.9rem;color:var(--w-85)}
+
+.concept{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 22px 20px;transition:border-color .35s var(--ease),transform .35s var(--ease)}
+.concept:hover{border-color:var(--cyan-line);transform:translateY(-3px)}
+.concept .n{font-family:'Poppins';font-weight:700;color:var(--cyan);font-size:.82rem;letter-spacing:.04em;margin-bottom:10px}
+.concept .frase{font-family:'Poppins';font-weight:500;font-size:1.08rem;line-height:1.3;color:#fff}
+.concept .frase em{font-style:italic;color:var(--cyan)}
+.concept .nota{font-size:.85rem;color:var(--w-65);margin-top:10px}
+
+.r{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.r.in{opacity:1;transform:none}
+.d1{transition-delay:.05s}.d2{transition-delay:.14s}.d3{transition-delay:.23s}.d4{transition-delay:.32s}.d5{transition-delay:.41s}.d6{transition-delay:.5s}
+
+/* cover */
+.cover{overflow:hidden}
+.cover-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.cover-shade{position:absolute;inset:0;z-index:1;background:
+  linear-gradient(100deg, rgba(37,10,79,.95) 0%, rgba(45,8,84,.88) 34%, rgba(58,11,110,.55) 62%, rgba(20,6,55,.45) 100%),
+  radial-gradient(900px 600px at 88% 6%, rgba(31,232,216,.18), transparent 60%)}
+.lockup{display:flex;align-items:center;gap:18px;margin-bottom:34px}
+.lockup .cl{display:inline-flex;align-items:center;background:#fff;border-radius:14px;padding:10px 16px}
+.lockup .cl img{height:30px;display:block}
+.lockup .x{font-family:'Poppins';font-weight:300;font-size:1.5rem;color:var(--w-45)}
+.lockup .pop img{height:34px;display:block}
+.cover-eyebrow{font-family:'Poppins';font-weight:600;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--cyan);margin-bottom:24px}
+.cover h1{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:700;line-height:1.02}
+.cover .sub{font-family:'Poppins';font-weight:300;font-size:clamp(1.15rem,2.3vw,1.7rem);color:var(--w-85);margin-top:24px}
+.cover .meta{display:flex;gap:30px;flex-wrap:wrap;margin-top:44px;font-size:.86rem;color:var(--w-65)}
+.cover .meta b{color:var(--cyan);font-weight:600;font-family:'Poppins';display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px}
+
+@media(max-width:900px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr);gap:22px}
+  .tl{grid-template-columns:1fr;gap:30px}
+  .tl::before{display:none}
+  .dots{display:none}
+  section{padding:104px 22px 84px}
+  .topbar{padding:14px 20px}.sfoot{left:22px;right:22px}
+  .tb-right .lbl{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<div class="topbar" id="topbar">
+  <span class="cl-chip"><img src="Img/centralab-logo.svg" alt="CentraLab"></span>
+  <div class="tb-right"><span class="lbl">Plan de crecimiento 2026</span><img src="Img/popcorn-blanco.png" alt="Popcorn"></div>
+</div>
+
+<nav class="dots" id="dots">
+  <a href="#portada" class="active"><span>Portada</span></a>
+  <a href="#porque"><span>Por qué esta conversación</span></a>
+  <a href="#movimientos"><span>Dos movimientos</span></a>
+  <a href="#mapa"><span>Nueva forma de trabajar</span></a>
+  <a href="#innovacion"><span>Laboratorio de Innovación</span></a>
+  <a href="#benchmark"><span>Benchmark Competitivo</span></a>
+  <a href="#studio"><span>Content Studio</span></a>
+  <a href="#cultura"><span>Employer Branding + Comité</span></a>
+  <a href="#carter"><span>Cartelería Digital</span></a>
+  <a href="#idea"><span>La idea grande</span></a>
+  <a href="#momentos"><span>Momentos de vida</span></a>
+  <a href="#calendario"><span>365 días de salud</span></a>
+  <a href="#produccion"><span>Cómo se produce</span></a>
+  <a href="#territorios"><span>Territorios explorados</span></a>
+  <a href="#roadmap"><span>Roadmap</span></a>
+  <a href="#cierre"><span>Cierre</span></a>
+</nav>
+
+<!-- ============ 1 · PORTADA ============ -->
+<section id="portada" class="cover">
+  <img class="cover-bg" src="Img/sede-once.jpg" alt="Sede CentraLab" decoding="async">
+  <div class="cover-shade"></div>
+  <div class="wrap">
+    <div class="lockup r d1">
+      <span class="cl"><img src="Img/centralab-logo.svg" alt="CentraLab"></span>
+      <span class="x">×</span>
+      <span class="pop"><img src="Img/popcorn-blanco.png" alt="Popcorn"></span>
+    </div>
+    <div class="cover-eyebrow r d2">Propuesta de evolución 2026</div>
+    <h1 class="r d2">Dejemos de hablar<br>de posteos.<br>Hablemos de <span class="cy">crecimiento.</span></h1>
+    <p class="sub r d3">Una nueva forma de trabajar juntos + una idea grande para todo el año.</p>
+    <div class="meta r d4">
+      <div><b>Para</b>CentraLab · +20 sedes propias en CABA</div>
+      <div><b>Preparado por</b>Popcorn · Marketing &amp; Estrategia</div>
+      <div><b>Naturaleza</b>Plan anual · arranque flexible desde septiembre</div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Popcorn · No vendemos publicaciones, construimos crecimiento</span><span class="num">01 / 16</span></div>
+</section>
+
+<!-- ============ 2 · POR QUÉ ESTA CONVERSACIÓN ============ -->
+<section id="porque">
+  <div class="wrap">
+    <div class="kicker r d1">Por qué esta conversación</div>
+    <div class="grid g2" style="align-items:center;gap:52px">
+      <div>
+        <h2 class="sec r d1">Queremos <span class="cy">subir la apuesta.</span></h2>
+        <p class="lead r d2">Hoy ejecutamos campañas y contenidos con buen resultado. Somos ese <strong>socio estratégico que mira el mercado por ustedes, propone antes de que lo pidan y empuja el negocio hacia adelante.</strong></p>
+        <p class="lead r d3" style="margin-top:18px">Esta propuesta eleva lo que hacemos. Movemos la conversación de <strong>“qué publicamos este mes”</strong> a <strong>“cómo hacemos crecer a CentraLab este año”.</strong></p>
+        <div class="idea r d4" style="margin-top:30px">Es hora de mover el avispero:<br>de campañas sueltas a <span class="cy">un plan de crecimiento.</span></div>
+      </div>
+      <div class="r d2">
+        <div class="shot tall">
+          <img src="Img/recepcionista.jpg" alt="Equipo de CentraLab en sede" loading="lazy" decoding="async">
+          <div class="ov"></div>
+          <div class="cap"><div class="t">Una marca sólida, con espacio para crecer</div><div class="s">Trayectoria, red de sedes y equipo. La base está. Falta ocupar el terreno que nadie ocupa.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid g3 r d5" style="margin-top:44px">
+      <div class="card"><div class="ix">El cambio 01</div><h3>De ejecutar a anticipar</h3><p>No esperar el pedido. Llevar ideas, oportunidades y lecturas de mercado a la mesa de forma proactiva.</p></div>
+      <div class="card"><div class="ix">El cambio 02</div><h3>De campañas a sistema</h3><p>Menos acciones aisladas que se olvidan; más una narrativa y un banco de contenido que se construyen en el año.</p></div>
+      <div class="card"><div class="ix">El cambio 03</div><h3>De comunicación a negocio</h3><p>Reuniones que no hablan solo de posteos, sino de servicios, mercados, paciente y competencia.</p></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>El marketing acompaña al negocio, no es un set de publicaciones</span><span class="num">02 / 16</span></div>
+</section>
+
+<!-- ============ 3 · DOS MOVIMIENTOS ============ -->
+<section id="movimientos">
+  <div class="wrap">
+    <div class="kicker r d1">La propuesta en una vista</div>
+    <h2 class="sec r d1">Dos movimientos<br>que se potencian <span class="cy">entre sí.</span></h2>
+    <p class="lead r d2">Uno cambia <strong>cómo trabajamos juntos</strong>. El otro propone <strong>una gran idea creativa para el año</strong>. El primero crea el músculo; el segundo, el relato. Juntos transforman la cuenta.</p>
+    <div class="grid g2 r d3" style="margin-top:42px">
+      <div class="card" style="padding:34px">
+        <div class="ix">Movimiento A</div>
+        <h3 style="font-size:1.5rem">Una nueva forma de trabajar</h3>
+        <p style="margin-top:10px">Seis iniciativas que convierten a Popcorn en un socio estratégico: innovación trimestral, inteligencia de mercado, un estudio de contenido, marca empleadora y una mesa de negocio.</p>
+        <div class="chips" style="margin-top:18px"><span class="chip">Proactividad</span><span class="chip">Inteligencia</span><span class="chip">Sistema</span></div>
+      </div>
+      <div class="card" style="padding:34px;background:linear-gradient(135deg,rgba(123,52,240,.22),rgba(31,232,216,.10));border-color:var(--cyan-line)">
+        <div class="ix">Movimiento B</div>
+        <h3 style="font-size:1.5rem">Una idea grande para el año</h3>
+        <p style="margin-top:10px">Un territorio que ningún laboratorio argentino ocupa: <strong>“Siempre cerca de lo que más importa”</strong>, con un sello narrativo que enciende contenido todo el año.</p>
+        <div class="chips" style="margin-top:18px"><span class="chip">Concepto anual</span><span class="chip">Momentos de vida</span><span class="chip">Sin urgencia</span></div>
+      </div>
+    </div>
+    <p class="lead muted r d4" style="margin-top:28px">Importante: el Movimiento B <strong>no necesita cerrarse ya</strong>. Lo pensamos como un plan anual para empezar a producir <strong>de septiembre en adelante</strong>, con el tiempo necesario para cerrar bien el concepto. Sin presión, con criterio.</p>
+  </div>
+  <div class="sfoot"><span>A: el músculo · B: el relato</span><span class="num">03 / 16</span></div>
+</section>
+
+<!-- ============ 4 · MAPA NUEVA FORMA DE TRABAJAR ============ -->
+<section id="mapa">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · El mapa</div>
+    <h2 class="sec r d1">Seis maneras de estar<br><span class="cy">un paso adelante.</span></h2>
+    <p class="lead r d2">Cada iniciativa responde a una idea simple: que CentraLab sienta que <strong>hay alguien pensando su negocio todo el tiempo</strong>, no solo produciendo piezas. Las desarrollamos una por una en las próximas páginas.</p>
+    <div class="grid g3 r d3" style="margin-top:40px">
+      <div class="card"><div class="ix">01</div><h3>Laboratorio de Innovación</h3><p>3 ideas nuevas por trimestre para hacer crecer el negocio. Se implementen o no, demuestran pensamiento constante.</p></div>
+      <div class="card"><div class="ix">02</div><h3>Benchmark Competitivo</h3><p>Informe trimestral de qué hace la competencia en pauta, contenido, SEO, IA y redes. El mercado, mirado por ustedes.</p></div>
+      <div class="card"><div class="ix">03</div><h3>Content Studio</h3><p>Jornadas de producción que generan un banco de contenido para todo el trimestre. Mucho más que “grabar un video”.</p></div>
+      <div class="card"><div class="ix">04</div><h3>Employer Branding</h3><p>Capacitación a C-Levels en LinkedIn y marca personal, sin costo. La cultura de CentraLab, por fin contada.</p></div>
+      <div class="card"><div class="ix">05</div><h3>Comité de Crecimiento</h3><p>Una reunión trimestral distinta a la operativa: negocio, servicios, mercado e innovación. No posteos.</p></div>
+      <div class="card"><div class="ix">06</div><h3>Refresh de Cartelería Digital</h3><p>Actualización de la identidad visual de la cartelería a una estética más moderna y alineada a la marca.</p></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Seis iniciativas · un mismo objetivo: anticipar</span><span class="num">04 / 16</span></div>
+</section>
+
+<!-- ============ 5 · LABORATORIO DE INNOVACIÓN ============ -->
+<section id="innovacion">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · Iniciativa 01</div>
+    <div class="grid g2" style="align-items:center;gap:48px">
+      <div>
+        <h2 class="sec r d1">Laboratorio<br>de <span class="cy">Innovación.</span></h2>
+        <p class="lead r d2">Nos comprometemos a presentar <strong>3 ideas nuevas por trimestre</strong> para hacer crecer el negocio de CentraLab. Se implementen o no, el objetivo es que CentraLab perciba que <strong>siempre estamos pensando nuevas oportunidades</strong> para la marca.</p>
+        <div class="idea r d3" style="margin-top:26px">La innovación deja de ser un golpe de suerte<br>y pasa a ser <span class="cy">un compromiso con fecha.</span></div>
+      </div>
+      <div class="r d2" style="display:flex;flex-direction:column;gap:20px">
+        <div class="qbox">
+          <span class="q">Trimestre 1 · ejemplo</span>
+          <h3>Encender la marca</h3>
+          <ul class="blist"><li><b>Nueva campaña</b> con un ángulo aún no explorado</li><li><b>Nueva experiencia digital</b> para el paciente</li><li>Una tercera idea según contexto del trimestre</li></ul>
+        </div>
+        <div class="qbox">
+          <span class="q">Trimestre 2 · ejemplo</span>
+          <h3>Expandir el repertorio</h3>
+          <ul class="blist"><li><b>Nuevo formato de contenido</b></li><li><b>Nuevo servicio</b> comunicable</li><li><b>Nuevo flujo de WhatsApp</b> para turnos o resultados</li></ul>
+        </div>
+      </div>
+    </div>
+    <p class="lead muted r d4" style="margin-top:34px">Cada idea llega documentada: <strong>qué problema resuelve, qué valor genera, cómo se implementa y cómo se mide.</strong> CentraLab decide; nosotros garantizamos que el flujo de ideas no se apague nunca.</p>
+  </div>
+  <div class="sfoot"><span>3 ideas nuevas cada trimestre · pensamiento constante</span><span class="num">05 / 16</span></div>
+</section>
+
+<!-- ============ 6 · BENCHMARK COMPETITIVO ============ -->
+<section id="benchmark">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · Iniciativa 02</div>
+    <h2 class="sec r d1">Benchmark Competitivo.<br>Alguien mira el mercado <span class="cy">por ustedes.</span></h2>
+    <p class="lead r d2">Un informe trimestral que resume qué está haciendo la competencia —<strong>Rossi, Diagnóstico Maipú y otros</strong>— para detectar movimientos, anticipar tendencias y traer oportunidades a la mesa antes de que se vuelvan urgencias.</p>
+    <div class="grid g4 r d3" style="margin-top:40px">
+      <div class="card"><div class="ix">↳</div><h3>Publicidad</h3><p>Qué campañas y mensajes están pauteando, y dónde.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>Contenidos</h3><p>Temas, formatos y frecuencia que están trabajando.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>SEO</h3><p>Cómo se posicionan en las búsquedas que importan.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>Videos</h3><p>Qué historias audiovisuales están contando.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>IA</h3><p>Qué usos de inteligencia artificial están explorando.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>TikTok</h3><p>Si y cómo están ocupando el terreno de audiencias jóvenes.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>LinkedIn</h3><p>Su comunicación institucional, B2B y de marca empleadora.</p></div>
+      <div class="card"><div class="ix">↳</div><h3>Email Marketing</h3><p>Cómo trabajan la relación directa con su base.</p></div>
+    </div>
+    <div class="idea r d4" style="margin-top:38px">CentraLab deja de reaccionar al mercado<br>para <span class="cy">anticiparse a él.</span></div>
+  </div>
+  <div class="sfoot"><span>Informe trimestral · inteligencia competitiva accionable</span><span class="num">06 / 16</span></div>
+</section>
+
+<!-- ============ 7 · CONTENT STUDIO ============ -->
+<section id="studio">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · Iniciativa 03</div>
+    <div class="grid g2" style="align-items:center;gap:48px">
+      <div class="r d1">
+        <div class="shot tall">
+          <img src="Img/tecnico.jpg" alt="Producción de contenido con bioquímico de CentraLab" loading="lazy" decoding="async">
+          <div class="ov"></div>
+          <div class="cap"><div class="t">Content Studio en acción</div><div class="s">Una jornada, un banco de contenido para todo el trimestre.</div></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="sec r d1">De “Producción Audiovisual”<br>a <span class="cy">Content Studio.</span></h2>
+        <p class="lead r d2">No es solo un cambio de nombre: es un cambio de valor percibido. Cada jornada deja de ser “grabar un video” para convertirse en <strong>una sesión que genera un banco de contenido para todo el trimestre.</strong></p>
+        <div class="evo r d3" style="margin-top:24px"><span class="old">Producción Audiovisual</span><span class="arrow">→</span><span class="new">Content Studio</span></div>
+        <div class="chips r d4" style="margin-top:24px"><span class="chip"><b>6</b> medias jornadas al año</span><span class="chip">Banco de contenido</span><span class="chip">Por trimestre</span></div>
+      </div>
+    </div>
+    <div class="grid g4 r d5" style="margin-top:42px">
+      <div class="card"><div class="ix">Captura</div><h3>Imagen</h3><p>Fotografías, videos, reels y behind the scenes con calidad de marca.</p></div>
+      <div class="card"><div class="ix">Voz</div><h3>Personas</h3><p>Entrevistas y testimonios con médicos, bioquímicos y pacientes.</p></div>
+      <div class="card"><div class="ix">Rigor</div><h3>Procesos</h3><p>El detrás de escena del laboratorio: tecnología, control y calidad.</p></div>
+      <div class="card"><div class="ix">Resultado</div><h3>Banco trimestral</h3><p>Material suficiente para alimentar todos los canales sin urgencias ni picos.</p></div>
+    </div>
+  </div>
+  <div class="sfoot"><span>6 medias jornadas al año · un banco vivo de contenido</span><span class="num">07 / 16</span></div>
+</section>
+
+<!-- ============ 8 · EMPLOYER BRANDING + COMITÉ ============ -->
+<section id="cultura">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · Iniciativas 04 y 05</div>
+    <h2 class="sec r d1">Subamos la conversación<br>al <span class="cy">nivel del negocio.</span></h2>
+    <p class="lead r d2">CentraLab tiene un equipo muy sólido y una cultura que casi no comunica. Y merece una mesa donde se hable de crecimiento, no solo de calendario. Dos iniciativas que elevan la relación.</p>
+    <div class="grid g2 r d3" style="margin-top:40px">
+      <div class="card" style="padding:32px">
+        <div class="ix">Iniciativa 04 · Sin costo</div>
+        <h3 style="font-size:1.35rem">Employer Branding</h3>
+        <p style="margin-top:10px">Ofrecemos, <strong>sin costo</strong>, una capacitación para C-Levels sobre el uso estratégico de LinkedIn y la importancia de construir marca personal e institucional.</p>
+        <ul class="blist" style="margin-top:16px">
+          <li>La cultura interna, por fin contada hacia afuera</li>
+          <li>Directivos visibles = marca más confiable y humana</li>
+          <li>Si interesa, luego se profundiza con otras acciones</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:32px;background:linear-gradient(135deg,rgba(123,52,240,.20),rgba(31,232,216,.08));border-color:var(--cyan-line)">
+        <div class="ix">Iniciativa 05 · Trimestral</div>
+        <h3 style="font-size:1.35rem">Comité de Crecimiento</h3>
+        <p style="margin-top:10px">Una reunión trimestral <strong>distinta al seguimiento operativo</strong>. Dejamos de hablar de posteos y campañas para enfocarnos en el negocio.</p>
+        <div class="chips" style="margin-top:16px">
+          <span class="chip">Nuevos servicios</span><span class="chip">Nuevos mercados</span><span class="chip">Innovación</span><span class="chip">IA aplicada</span><span class="chip">Experiencia del paciente</span><span class="chip">Competencia</span><span class="chip">Tendencias</span><span class="chip">Indicadores de negocio</span>
+        </div>
+      </div>
+    </div>
+    <p class="lead muted r d4" style="margin-top:26px">Ambas comparten un propósito: que Popcorn sea percibido como <strong>un socio que piensa el negocio de CentraLab</strong>, no como un proveedor de piezas.</p>
+  </div>
+  <div class="sfoot"><span>Marca empleadora + mesa de negocio trimestral</span><span class="num">08 / 16</span></div>
+</section>
+
+<!-- ============ 9 · CARTELERÍA DIGITAL ============ -->
+<section id="carter">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento A · Iniciativa 06</div>
+    <div class="grid g2" style="align-items:center;gap:48px">
+      <div>
+        <h2 class="sec r d1">Refresh de<br><span class="cy">Cartelería Digital.</span></h2>
+        <p class="lead r d2">Aprovechamos este plan para incluir una actualización de la identidad visual de la cartelería digital de las sedes, llevándola a una <strong>estética más moderna y alineada con la evolución de la marca.</strong></p>
+        <ul class="blist r d3" style="margin-top:22px">
+          <li><b>Coherencia:</b> que las pantallas hablen el mismo idioma visual que el resto de la marca</li>
+          <li><b>Modernidad:</b> diseño más limpio, contemporáneo y legible</li>
+          <li><b>Sinergia:</b> la cartelería se alimenta del banco del Content Studio</li>
+        </ul>
+        <div class="idea r d4" style="margin-top:26px">Cada pantalla en sede es un medio propio.<br>Que <span class="cy">trabaje a favor de la marca.</span></div>
+      </div>
+      <div class="r d2">
+        <div class="shot tall">
+          <img src="Img/paciente-recepcion.jpg" alt="Sala de espera y puntos de contacto en sede CentraLab" loading="lazy" decoding="async">
+          <div class="ov"></div>
+          <div class="cap"><div class="t">El punto de contacto en sede</div><div class="s">Donde el paciente ya está mirando: la oportunidad de comunicar mejor.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Medios propios actualizados a la marca actual</span><span class="num">09 / 16</span></div>
+</section>
+
+<!-- ============ 10 · LA IDEA GRANDE ============ -->
+<section id="idea">
+  <div class="wrap" style="text-align:center">
+    <div class="kicker r d1" style="justify-content:center">Movimiento B · La idea grande</div>
+    <div class="opt-badge r d1" style="margin-bottom:24px">Territorio que nadie ocupa en Argentina</div>
+    <h2 class="r d2" style="font-size:clamp(2.2rem,6vw,4.4rem);font-weight:700;line-height:1.04">Siempre cerca<br>de lo que <span class="cy">más importa.</span></h2>
+    <p class="lead r d3" style="margin:26px auto 0;text-align:center">Evoluciona el histórico “Tu laboratorio siempre cerca” hacia un territorio humano y abierto. Porque <strong>“lo que más importa” cambia según cada persona</strong> — y eso le da a CentraLab un universo de historias para contar todo el año.</p>
+    <div class="grid g3 r d4" style="margin-top:46px;text-align:left">
+      <div class="card"><div class="ix">Para una mamá</div><p>La salud de su hijo.</p></div>
+      <div class="card"><div class="ix">Para un adulto mayor</div><p>La tranquilidad de sus controles.</p></div>
+      <div class="card"><div class="ix">Para una empresa</div><p>El bienestar de su equipo.</p></div>
+      <div class="card"><div class="ix">Para un deportista</div><p>Su rendimiento.</p></div>
+      <div class="card"><div class="ix">Para quien está en tratamiento</div><p>Un resultado confiable.</p></div>
+      <div class="card"><div class="ix">Para una familia</div><p>La prevención.</p></div>
+    </div>
+    <div class="idea r d5" style="margin:48px auto 0;max-width:50ch;text-align:left">Y el sello que enciende todo el relato:<br><span class="cy">“Las historias empiezan mucho antes del resultado.”</span></div>
+    <p class="lead muted r d5" style="margin:22px auto 0;text-align:center">Un análisis nunca es un fin: es el comienzo de algo. Un embarazo, un tratamiento, volver a entrenar, quedarse tranquilo, cuidar a un hijo, acompañar a un padre.</p>
+  </div>
+  <div class="sfoot"><span>Plataforma anual · cercanía emocional, no geográfica</span><span class="num">10 / 16</span></div>
+</section>
+
+<!-- ============ 11 · MOMENTOS DE VIDA ============ -->
+<section id="momentos">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento B · La plataforma de contenido</div>
+    <h2 class="sec r d1">Acompañamos cada<br>etapa de tu <span class="cy">salud.</span></h2>
+    <p class="lead r d2">El concepto se baja a <strong>momentos de vida</strong>. Cada etapa es una historia, un público y una campaña posible. Por eso es tan potente para contenido: no se agota, porque la vida no se detiene.</p>
+    <div class="grid g3 r d3" style="margin-top:40px">
+      <div class="card"><div class="ix">Etapa 01</div><h3>Niñez</h3><p>El primer análisis, el pediatra, la contención. Cuidar desde el principio.</p></div>
+      <div class="card"><div class="ix">Etapa 02</div><h3>Embarazo</h3><p>El acompañamiento mes a mes. Uno de los momentos más sensibles y memorables.</p></div>
+      <div class="card"><div class="ix">Etapa 03</div><h3>Adultos</h3><p>El chequeo que se posterga, la prevención que se vuelve hábito.</p></div>
+      <div class="card"><div class="ix">Etapa 04</div><h3>Adultos mayores</h3><p>Los controles, la autonomía, el cuidado sin traslados.</p></div>
+      <div class="card"><div class="ix">Etapa 05</div><h3>Prevención &amp; chequeos</h3><p>El eje transversal: la salud que se cuida antes de que aparezca el síntoma.</p></div>
+    </div>
+    <div class="idea r d4" style="margin-top:38px">Una misma marca, presente en cada etapa.<br>Cada análisis, <span class="cy">una parte de tu historia.</span></div>
+  </div>
+  <div class="sfoot"><span>Comunicación por momentos de vida · contenido infinito</span><span class="num">11 / 16</span></div>
+</section>
+
+<!-- ============ 12 · 365 DÍAS DE SALUD ============ -->
+<section id="calendario">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento B · El plan anual</div>
+    <h2 class="sec r d1">365 días<br>de <span class="cy">salud.</span></h2>
+    <p class="lead r d2">El concepto se traduce en un <strong>calendario editorial</strong>: cada mes tiene una excusa real para hablar de salud. Esto justifica contenido permanente, no campañas aisladas. Un mapa que se planifica con tiempo y se produce con el Content Studio.</p>
+    <div class="grid g4 r d3" style="margin-top:40px">
+      <div class="mon"><div class="m">Febrero</div><div class="t">Verano activo</div><div class="d">Chequeos previos a la actividad física.</div></div>
+      <div class="mon key"><div class="m">Marzo</div><div class="t">Vuelta al colegio</div><div class="d">Salud infantil y controles escolares.</div></div>
+      <div class="mon key"><div class="m">Abril</div><div class="t">Deporte</div><div class="d">Aptos y rendimiento físico.</div></div>
+      <div class="mon"><div class="m">Mayo</div><div class="t">Trabajo</div><div class="d">Salud laboral y empresas.</div></div>
+      <div class="mon key"><div class="m">Junio</div><div class="t">Invierno</div><div class="d">Prevención estacional y defensas.</div></div>
+      <div class="mon"><div class="m">Julio</div><div class="t">Familia</div><div class="d">Cuidado de todas las edades.</div></div>
+      <div class="mon key"><div class="m">Agosto</div><div class="t">Adultos mayores</div><div class="d">Controles y acompañamiento.</div></div>
+      <div class="mon"><div class="m">Sept.</div><div class="t">Primavera</div><div class="d">Reactivación y nuevos hábitos.</div></div>
+      <div class="mon key"><div class="m">Octubre</div><div class="t">Prevención</div><div class="d">Mes de la concientización.</div></div>
+      <div class="mon key"><div class="m">Noviembre</div><div class="t">Chequeo anual</div><div class="d">El gran momento del año.</div></div>
+      <div class="mon"><div class="m">Diciembre</div><div class="t">Balance</div><div class="d">Cerrar el año cuidándose.</div></div>
+      <div class="mon"><div class="m">Enero</div><div class="t">Propósitos</div><div class="d">Empezar el año con un chequeo.</div></div>
+    </div>
+    <p class="lead muted r d4" style="margin-top:28px">La salud sucede todos los días. CentraLab también. <strong>El calendario convierte la marca en una presencia constante</strong>, no en una serie de apariciones sueltas.</p>
+  </div>
+  <div class="sfoot"><span>Un calendario editorial que no se agota</span><span class="num">12 / 16</span></div>
+</section>
+
+<!-- ============ 13 · CÓMO SE PRODUCE ============ -->
+<section id="produccion">
+  <div class="wrap">
+    <div class="kicker r d1">Movimiento B · Cómo se produce</div>
+    <h2 class="sec r d1">Un video base.<br>Decenas de <span class="cy">reducciones.</span></h2>
+    <p class="lead r d2">La idea se explica con <strong>un video base</strong> —el manifiesto de marca— del que se derivan múltiples piezas cortas para cada momento de vida, canal y campaña. Una producción, un año de contenido. Acá se conecta con el Content Studio.</p>
+    <div class="grid g3 r d3" style="margin-top:42px;align-items:start">
+      <div class="card" style="background:linear-gradient(150deg,rgba(123,52,240,.30),rgba(31,232,216,.10));border-color:var(--cyan-line)">
+        <div class="ix">Pieza madre</div>
+        <h3>Video base · Manifiesto</h3>
+        <p style="margin-top:6px">“Las historias empiezan mucho antes del resultado.” El relato institucional que define el territorio y da el tono a todo lo demás.</p>
+      </div>
+      <div class="card">
+        <div class="ix">Se derivan en</div>
+        <h3>Reducciones por momento</h3>
+        <ul class="blist" style="margin-top:8px"><li>Cortes por etapa de vida (niñez, embarazo, adultos…)</li><li>Reels y formatos verticales para redes</li><li>Stories y piezas para WhatsApp</li><li>Loops para cartelería digital en sede</li></ul>
+      </div>
+      <div class="card">
+        <div class="ix">El resultado</div>
+        <h3>Eficiencia + coherencia</h3>
+        <p style="margin-top:6px">Todo nace de una misma idea madre: máxima coherencia estética y de mensaje, con el costo de producción optimizado. El sistema crece sin empezar de cero cada vez.</p>
+      </div>
+    </div>
+    <div class="idea r d4" style="margin-top:38px">No producimos piezas sueltas.<br>Construimos <span class="cy">un sistema audiovisual que se multiplica.</span></div>
+  </div>
+  <div class="sfoot"><span>Video base + reducciones · una producción, un año de contenido</span><span class="num">13 / 16</span></div>
+</section>
+
+<!-- ============ 14 · TERRITORIOS EXPLORADOS ============ -->
+<section id="territorios">
+  <div class="wrap">
+    <div class="kicker r d1">El banco de ideas · Para conversar</div>
+    <h2 class="sec r d1">No llegamos con una idea.<br>Llegamos con <span class="cy">un territorio entero.</span></h2>
+    <p class="lead r d2">Antes de elegir, exploramos. Estos son los conceptos que pusimos sobre la mesa para encontrar el rumbo. Algunos refuerzan el concepto elegido; otros pueden ser campañas puntuales dentro del año. La materia prima está.</p>
+    <div class="grid g3 r d3" style="margin-top:40px">
+      <div class="concept"><div class="n">Concepto 01</div><div class="frase">Siempre cerca de lo que <em>más importa</em>.</div><div class="nota">Acompañamiento, no sucursales. El elegido como plataforma.</div></div>
+      <div class="concept"><div class="n">Concepto 02</div><div class="frase">Acompañamos <em>cada etapa</em> de tu salud.</div><div class="nota">Comunicación por momentos de vida. Muy potente para contenido.</div></div>
+      <div class="concept"><div class="n">Concepto 03</div><div class="frase">Las historias empiezan <em>antes del resultado</em>.</div><div class="nota">El sello narrativo. El análisis como comienzo, no como fin.</div></div>
+      <div class="concept"><div class="n">Concepto 04</div><div class="frase">La prevención tiene una fecha. <em>Hoy.</em></div><div class="nota">Invita a no esperar un síntoma para ocuparse de la salud.</div></div>
+      <div class="concept"><div class="n">Concepto 05</div><div class="frase">Detrás de cada resultado, <em>hay personas</em>.</div><div class="nota">Mostrar bioquímicos, técnicos y tecnología. Nadie lo hace.</div></div>
+      <div class="concept"><div class="n">Concepto 06</div><div class="frase">Tu salud <em>habla antes que vos</em>.</div><div class="nota">El cuerpo dice algo antes del síntoma. Escucharlo es prevenir.</div></div>
+      <div class="concept"><div class="n">Concepto 07</div><div class="frase">La ciencia al servicio de tu <em>tranquilidad</em>.</div><div class="nota">No vendemos resultados: vendemos tranquilidad.</div></div>
+      <div class="concept"><div class="n">Concepto 08</div><div class="frase">No esperaste para todo. <em>Para esto, no.</em></div><div class="nota">Minimalista. El chequeo es lo único que no se pospone.</div></div>
+      <div class="concept"><div class="n">Concepto 09</div><div class="frase">El laboratorio <em>invisible</em>.</div><div class="nota">Cuando todo sale bien, nadie piensa en el laboratorio. Y está perfecto.</div></div>
+    </div>
+    <p class="lead muted r d4" style="margin-top:28px">Este es exactamente el espíritu del <strong>Laboratorio de Innovación</strong>: traer siempre más ideas de las que se necesitan, para que CentraLab elija desde la abundancia, no desde la urgencia.</p>
+  </div>
+  <div class="sfoot"><span>9 territorios explorados · pensamiento en abundancia</span><span class="num">14 / 16</span></div>
+</section>
+
+<!-- ============ 15 · ROADMAP ============ -->
+<section id="roadmap">
+  <div class="wrap">
+    <div class="kicker r d1">Cómo lo hacemos realidad</div>
+    <h2 class="sec r d1">Sin urgencia.<br>Con <span class="cy">método.</span></h2>
+    <p class="lead r d2">El Movimiento A puede arrancar ya. El Movimiento B lo pensamos con tiempo para cerrar bien el concepto y empezar a producir <strong>de septiembre en adelante</strong>. Un plan anual, no una corrida.</p>
+    <div class="tl r d3">
+      <div class="ph">
+        <div class="dot"></div>
+        <div class="when">Julio – Agosto</div>
+        <h3>Definir y cerrar</h3>
+        <p>Activamos el Movimiento A (Comité, Benchmark, primeras ideas). En paralelo, cerramos el concepto y escribimos el guion del video base. Sin apuro.</p>
+      </div>
+      <div class="ph">
+        <div class="dot"></div>
+        <div class="when">Septiembre</div>
+        <h3>Primera jornada</h3>
+        <p>Primera jornada de Content Studio y producción del video base. Arranca la maquinaria del concepto anual.</p>
+      </div>
+      <div class="ph">
+        <div class="dot"></div>
+        <div class="when">Octubre – Diciembre</div>
+        <h3>Multiplicar</h3>
+        <p>Reducciones por momento de vida, calendario editorial en marcha, primer Benchmark entregado y primer Comité de Crecimiento.</p>
+      </div>
+      <div class="ph">
+        <div class="dot"></div>
+        <div class="when">2027 en adelante</div>
+        <h3>Sistema en régimen</h3>
+        <p>3 ideas por trimestre, Benchmark trimestral, 6 jornadas de Content Studio al año y la marca presente los 365 días.</p>
+      </div>
+    </div>
+  </div>
+  <div class="sfoot"><span>Arranque flexible · plan anual con método</span><span class="num">15 / 16</span></div>
+</section>
+
+<!-- ============ 16 · CIERRE ============ -->
+<section id="cierre">
+  <div class="wrap" style="text-align:center">
+    <div class="kicker r d1" style="justify-content:center">Cierre</div>
+    <h2 class="r d2" style="font-size:clamp(2rem,5vw,3.6rem);font-weight:700;line-height:1.1">No proponemos más piezas.<br>Proponemos <span class="cy">un año pensado<br>para crecer juntos.</span></h2>
+    <p class="lead r d3" style="margin:26px auto 0;text-align:center">Una nueva forma de trabajar que se anticipa, y una idea grande que ningún laboratorio argentino está ocupando. El terreno está libre. Movamos el avispero.</p>
+    <div class="tagblock r d3" style="font-size:clamp(1.2rem,2.4vw,1.7rem);margin-top:32px">CentraLab. Siempre cerca de lo que más importa.</div>
+    <div class="r d4" style="margin-top:42px">
+      <a class="cta-go" href="mailto:demianlinet@somospopcorn.com?subject=CentraLab%20%C2%B7%20Plan%20de%20crecimiento%202026&body=Hola%20Demian%2C%20vimos%20la%20propuesta%20de%20CentraLab%20y%20queremos%20conversarla.">Conversemos el plan →</a>
+    </div>
+    <div class="lockup r d5" style="justify-content:center;margin:48px 0 0">
+      <span class="cl"><img src="Img/centralab-logo.svg" alt="CentraLab"></span>
+      <span class="x">×</span>
+      <span class="pop"><img src="Img/popcorn-blanco.png" alt="Popcorn"></span>
+    </div>
+  </div>
+  <div class="sfoot"><span>Propuesta CentraLab · Popcorn · 2026</span><span class="num">16 / 16</span></div>
+</section>
+
+<script>
+const prog=document.getElementById('progress');
+addEventListener('scroll',()=>{
+  const h=document.documentElement;
+  prog.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
+  document.getElementById('topbar').classList.toggle('scrolled',h.scrollTop>40);
+});
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')})},{threshold:.12});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+const dotLinks=[...document.querySelectorAll('.dots a')];
+const so=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;if(id)dotLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id))}})},{threshold:.5});
+document.querySelectorAll('section[id]').forEach(s=>so.observe(s));
+</script>
+</body>
+</html>
